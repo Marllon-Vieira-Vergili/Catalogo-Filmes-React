@@ -1,0 +1,27 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo preto -->
+  <rect width="100%" height="100%" fill="#000000"/>
+
+  <!-- Texto 404 -->
+  <text x="50%" y="45%" text-anchor="middle"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="160"
+        font-weight="900"
+        fill="#E50914"
+        stroke="#B20710"
+        stroke-width="4">
+    404
+  </text>
+
+  <!-- Texto "Página não encontrada" -->
+  <text x="50%" y="65%" text-anchor="middle"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="32"
+        font-weight="600"
+        fill="#FFFFFF">
+    Página não encontrada
+  </text>
+
+  <!-- Linha vermelha decorativa -->
+  <rect x="200" y="300" width="400" height="6" fill="#E50914"/>
+</svg>

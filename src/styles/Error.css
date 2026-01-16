@@ -1,0 +1,111 @@
+/* CONTAINER PRINCIPAL */
+.error-container {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0a0a0a 0%, #0f0f1a 40%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* IMAGEM */
+.error-container img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    filter: drop-shadow(0 15px 35px rgba(229, 9, 20, 0.45));
+    animation: floating 3.5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+/* TEXTO 404 AO FUNDO */
+.error-container::before {
+    content: "404";
+    position: absolute;
+    top: 5%;
+    font-size: 16rem;
+    font-weight: 900;
+    color: rgba(200, 0, 10, 0.08);
+    letter-spacing: 10px;
+    z-index: -1;
+    animation: neonPulse 4s ease-in-out infinite;
+    user-select: none;
+}
+
+@keyframes neonPulse {
+    0%, 100% { opacity: 0.08; filter: blur(1px); }
+    50% { opacity: 0.16; filter: blur(4px); }
+}
+
+/* BOTÃO */
+.error-style {
+    padding: 1.3rem 3.5rem;
+    background: linear-gradient(135deg, #e50914 0%, #9a0610 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(229, 9, 20, 0.45);
+}
+
+/* BRILHO PASSANDO NO BOTÃO */
+.error-style::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.23), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.error-style:hover::before {
+    left: 120%;
+}
+
+.error-style:hover {
+    transform: translateY(-6px) scale(1.06);
+    box-shadow: 0 12px 45px rgba(229, 9, 20, 0.7);
+}
+
+.error-style:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .error-container img {
+        max-width: 320px;
+    }
+
+    .error-style {
+        font-size: 1rem;
+        padding: 1rem 2.3rem;
+    }
+
+    .error-container::before {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-container::before {
+        font-size: 5rem;
+    }
+}

@@ -1,0 +1,212 @@
+/* ================================
+   CONTAINER PRINCIPAL
+================================ */
+.favoritos-container {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1b1b2f 0%, #0d0d0d 100%);
+    padding: 3.5rem 2rem;
+    animation: fade-screen 0.8s ease;
+}
+
+@keyframes fade-screen {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.favoritos-container h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+
+    background: linear-gradient(90deg, #ff0033, #ff4f4f, #f70000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(255, 30, 40, 0.35));
+}
+
+.contador-favoritos {
+    text-align: center;
+    color: #cccccc;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ================================
+   ESTADO VAZIO
+================================ */
+.empty-fav-movies {
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    max-width: 600px;
+    margin: 3rem auto;
+    animation: fade-in 0.6s ease;
+}
+
+.empty-fav-movies p {
+    color: #bbbbbb;
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+}
+
+.empty-fav-movies a {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #ff0026, #c7001a);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.25s;
+    box-shadow: 0 6px 20px rgba(255, 0, 40, 0.35);
+}
+
+.empty-fav-movies a:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(255, 0, 40, 0.55);
+}
+
+/* ================================
+   GRID DE FAVORITOS
+================================ */
+.card-favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2.7rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filme-card {
+    background: linear-gradient(145deg, #191929, #10101a);
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 15px 25px rgba(0, 0, 0, 0.65),
+        0 0 20px rgba(255, 0, 30, 0.08);
+
+    transition: transform 0.35s ease, box-shadow 0.4s ease;
+}
+
+.filme-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:
+        0 25px 45px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(255, 20, 20, 0.25);
+}
+
+/* Linha brilhante no topo */
+.filme-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff0f2f, #ff6e6e, #ff0f2f);
+    background-size: 200% 100%;
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.filme-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.filme-card:hover img {
+    transform: scale(1.08);
+}
+
+.filme-card h2 {
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding: 1.3rem 1.5rem 0.5rem;
+}
+
+.filme-card p {
+    color: #d0d0d0;
+    padding: 0 1.5rem;
+    margin: 0.4rem 0;
+    line-height: 1.55;
+}
+
+.filme-card p:last-of-type {
+    padding-bottom: 1.2rem;
+    color: #ffffff;
+    opacity: 0.85;
+    font-weight: 600;
+}
+
+/* Botões */
+.buttons-group {
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.buttons-group a {
+    flex: 1;
+    text-align: center;
+    padding: 0.9rem 1.4rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #ff0033, #c4001d);
+    transition: 0.3s ease;
+    box-shadow: 0 5px 18px rgba(255, 0, 40, 0.35);
+}
+
+.buttons-group a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(255, 0, 40, 0.55);
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+@media (max-width: 768px) {
+    .favoritos-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .filme-card img {
+        height: 370px;
+    }
+}
+
+@media (max-width: 480px) {
+    .favoritos-container {
+        padding: 2rem 1rem;
+    }
+
+    .filme-card img {
+        height: 330px;
+    }
+
+    .buttons-group {
+        flex-direction: column;
+    }
+}
