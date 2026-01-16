@@ -1,3 +1,19 @@
+**Imagens do Projeto.**
+
+<div>
+<img width="1024" height="768" alt="Image" src="https://github.com/user-attachments/assets/6907e112-1c5c-45ea-a11c-f2477b5913ff" />
+    
+  <hr/>
+<img width="1024" height="768" alt="Image" src="https://github.com/user-attachments/assets/e09bbee5-25d7-48f7-a733-822b7c4d7e51" />
+  <hr/>
+<img width="1024" height="768" alt="Image" src="https://github.com/user-attachments/assets/fb6593f4-ff2e-408d-a565-e3234531663c" />
+  <hr/>
+<img width="1024" height="768" alt="Image" src="https://github.com/user-attachments/assets/b719656f-274c-41e0-b97c-18b5a5930158" />
+
+</div>
+
+<hr/>
+
 🎬 Projeto Filmes em Destaque — React + TMDb API
 
 Este é um projeto desenvolvido para prática de React, consumo de API externa e organização de componentes.
