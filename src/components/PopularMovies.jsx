@@ -20,7 +20,7 @@ export default function PopularMovies() {
 
             const response = await api.get("movie/popular", {
                 params: {
-                    api_key: "CHAVE_AQUI",
+                    api_key: "process.env.CHAVE_AQUI",
                     language: "pt-BR",
                     page: 1
                 }
