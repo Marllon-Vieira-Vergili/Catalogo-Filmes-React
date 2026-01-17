@@ -29,7 +29,7 @@ export default function Home(){
                 setLoading(true);
                 const response = await api.get("movie/now_playing", {
                 params: {
-                api_key: "CHAVE_AQUI",
+                api_key: "process.env.CHAVE_AQUI",
                 language: 'pt-BR',
                 page: currentPage
                 }
