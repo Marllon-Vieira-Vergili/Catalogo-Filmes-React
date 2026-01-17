@@ -18,7 +18,7 @@ export default function MovieInformation(){
                 // CORRIGIDO: api.get() precisa de parênteses, não crases
                 const response = await api.get(`movie/${id}`, {
                     params: {
-                        api_key: "CHAVE_AQUI",
+                        api_key: "process.env.CHAVE_AQUI",
                         language: "pt-BR"
                     },
                     headers: {
