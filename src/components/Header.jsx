@@ -24,7 +24,7 @@ export default function Header(){
 
             const response = await api.get("search/movie", {
             params: {
-                api_key: "process.env.CHAVE_AQUI",
+                api_key: import.meta.env.VITE_CHAVE_AQUI,
                 language: "pt-BR",
                 query: nomeFilme
             }
