@@ -19,6 +19,8 @@
 Este é um projeto desenvolvido para prática de React, consumo de API externa e organização de componentes.
 A aplicação consome dados da API do TMDb (The Movie Database) para exibir filmes populares, detalhes de filmes e trailers.
 
+<hr/>
+
 🚀 Tecnologias utilizadas
 
 React.js
@@ -32,6 +34,7 @@ Axios
 Bootstrap 5 (carousel e layout)
 
 TMDb API
+<hr/>
 
 🎯 Objetivo do projeto
 
@@ -79,6 +82,8 @@ Abra no navegador:
 
 http://localhost:5173
 
+<hr/>
+
 🧩 Funcionalidades
 
 Listagem de filmes populares
@@ -91,6 +96,8 @@ Página de detalhes do filme
 
 Navegação entre rotas com React Router
 
+<hr/>
+
 📁 Estrutura geral
 src/
   components/
@@ -99,7 +106,7 @@ src/
   configs/api.js
   main.jsx
 
-
+<hr/>
 
 📌 Observações
 
